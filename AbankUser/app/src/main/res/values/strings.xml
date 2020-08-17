@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Abank-User</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Auth String-->
+    <string name="til_email_Address">Email Address</string>
 </resources>

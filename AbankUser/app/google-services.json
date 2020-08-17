@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "481518566194",
+    "firebase_url": "https://abank-22655.firebaseio.com",
+    "project_id": "abank-22655",
+    "storage_bucket": "abank-22655.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481518566194:android:173767dc95064239c9352b",
+        "android_client_info": {
+          "package_name": "com.nusantarian.abank_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481518566194-829g9lud3sa5k4u71muuif5k5lljngda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgnt5vdGJKwo7_j0vU3Zz0X9mYMmEBDzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481518566194-829g9lud3sa5k4u71muuif5k5lljngda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
