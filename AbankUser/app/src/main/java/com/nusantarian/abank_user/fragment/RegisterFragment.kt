@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.nusantarian.abank_user.R
 import com.nusantarian.abank_user.databinding.FragmentRegisterBinding
 
-class RegisterFragment : Fragment() {
+class RegisterFragment : Fragment(), View.OnClickListener {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
@@ -19,7 +19,12 @@ class RegisterFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        binding.btnSignup.setOnClickListener(this)
         return binding.root
+    }
+
+    override fun onClick(v: View) {
+
     }
 
 }
