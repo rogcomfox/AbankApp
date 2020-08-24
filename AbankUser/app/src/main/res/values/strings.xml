@@ -1,13 +1,18 @@
 <resources>
-    <string name="app_name">Abank-User</string>
+    <string name="app_name">AbankUser</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--Text Error String-->
     <string name="text_empty_field">This field is empty</string>
     <string name="text_invalid_email">Invalid Email Address</string>
     <string name="text_pass_below">Password too short, must above 8 characters</string>
+    <string name="text_pass_not_match">Password not same</string>
     <string name="text_failed_login">Failed log in your account</string>
     <string name="text_failed_reset">Failed reset your password</string>
+    <string name="text_failed_register">Failed to register your account</string>
+    <string name="text_success_register">Please Login First To Access Abank!</string>
+    <string name="text_success_send_verification">Please check your email to verify your account</string>
+    <string name="text_failed_send_verification">Failed to send verification email</string>
     <!--Text Success String-->
     <string name="text_welcome">Welcome To Abank!</string>
     <string name="text_success_reset">Please check your email inbox</string>
@@ -22,4 +27,7 @@
     <string name="til_confirm_pass">Confirm Password</string>
     <string name="tv_forgot_info">Please write your email address to reset your assword</string>
     <string name="btn_reset">Reset Password</string>
+    <string name="til_phone">Phone Number</string>
+    <string name="img_email_verification">Email Verification</string>
+    <string name="tv_info_verification">Please check your email address to verify your account</string>
 </resources>
