@@ -71,7 +71,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
     }
 
     private fun saveUserData(uid : String, email: String, name: String, phone: String, number: String) {
-        val data = User(number, email, name, phone)
+        val data = User(number, email, name, phone, PROFILE_PHOTO_URL)
         user.document(uid).set(data).addOnCompleteListener {
             if(it.isSuccessful){
                 Toast.makeText(activity, R.string.text_success_register, Toast.LENGTH_SHORT).show()
@@ -151,6 +151,10 @@ class RegisterFragment : Fragment(), View.OnClickListener {
             binding.tilConfirmPass.isErrorEnabled
             true
         }
+    }
+
+    companion object{
+        const val PROFILE_PHOTO_URL = ""
     }
 
 }

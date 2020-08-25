@@ -2,7 +2,14 @@
     <string name="app_name">AbankUser</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!--Text Error String-->
+    <!--Change Picture -->
+    <string name="title_change_picture">Choose action</string>
+    <string-array name="profile_picture">
+        <item>Take a photo</item>
+        <item>Choose from gallery</item>
+        <item>Delete profile picture</item>
+    </string-array>
+    <!--Text Message String-->
     <string name="text_empty_field">This field is empty</string>
     <string name="text_invalid_email">Invalid Email Address</string>
     <string name="text_pass_below">Password too short, must above 8 characters</string>
@@ -13,6 +20,9 @@
     <string name="text_success_register">Please Login First To Access Abank!</string>
     <string name="text_success_send_verification">Please check your email to verify your account</string>
     <string name="text_failed_send_verification">Failed to send verification email</string>
+    <string name="text_logout_verify">Are you sure to logout your account?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
     <!--Text Success String-->
     <string name="text_welcome">Welcome To Abank!</string>
     <string name="text_success_reset">Please check your email inbox</string>
@@ -30,4 +40,19 @@
     <string name="til_phone">Phone Number</string>
     <string name="img_email_verification">Email Verification</string>
     <string name="tv_info_verification">Please check your email address to verify your account</string>
+    <!--Main Fragment String-->
+    <string name="tv_welcome">Welcome</string>
+    <!--Icon String-->
+    <string name="ic_notification">Notifications</string>
+    <string name="ic_forum">Chatting</string>
+    <string name="ic_logout">Log Out</string>
+    <string name="ic_data_iot">IoT Data</string>
+    <string name="ic_maps">IoT Maps</string>
+    <string name="ic_settings">Settings</string>
+    <string name="ic_account">My Account</string>
+    <string name="ic_help">Help</string>
+    <string name="ic_call_center">Call Center</string>
+    <string name="ic_profile_picture">Profile Picture</string>
+    <string name="ic_change_email">Change Email</string>
+    <string name="ic_change_pass">Change Password</string>
 </resources>
