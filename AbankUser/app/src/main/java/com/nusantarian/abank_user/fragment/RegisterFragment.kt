@@ -154,7 +154,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
     }
 
     companion object{
-        const val PROFILE_PHOTO_URL = ""
+        const val PROFILE_PHOTO_URL = "https://firebasestorage.googleapis.com/v0/b/abank-22655.appspot.com/o/profilePicture%2Fdefault%2Fprofile_picture.png?alt=media&token=8f24a97f-43c2-4398-936b-40dfe8969818"
     }
 
 }

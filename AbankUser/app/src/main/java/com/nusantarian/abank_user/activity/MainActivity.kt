@@ -1,8 +1,12 @@
 package com.nusantarian.abank_user.activity
 
 import android.Manifest
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import com.nusantarian.abank_user.R
 import com.nusantarian.abank_user.databinding.ActivityMainBinding
@@ -24,10 +28,19 @@ class MainActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
         initMainFragment()
 
         //Camera X Permissions
-
+        if(!allPermissionsGranted()){
+            ActivityCompat.requestPermissions(
+                this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
+            )
+        }
 
         //Camera X
         cameraExecutor = Executors.newSingleThreadExecutor()
+    }
+
+    private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all{
+        ContextCompat.checkSelfPermission(
+            baseContext, it) == PackageManager.PERMISSION_GRANTED
     }
 
     private fun initMainFragment(){
@@ -57,7 +70,12 @@ class MainActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
         permissions: Array<out String>,
         grantResults: IntArray
     ) {
-
+        if (requestCode == REQUEST_CODE_PERMISSIONS){
+            if (!allPermissionsGranted()){
+                Toast.makeText(this, R.string.text_permission_not_granted, Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
     }
 
     override fun onDestroy() {

@@ -1,4 +1,4 @@
-package com.nusantarian.abank_user.activity
+package com.nusantarian.abank_gov.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.nusantarian.abank_user.databinding.ActivitySplashBinding
+import com.nusantarian.abank_gov.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
 
@@ -23,14 +23,12 @@ class SplashActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val user = FirebaseAuth.getInstance().currentUser
-
         Handler().postDelayed({
-            if (user != null) {
+            if (user != null){
                 startActivity(Intent(this, MainActivity::class.java))
             } else {
-                startActivity(Intent(this, AuthActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
             }
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }, 2000)
     }

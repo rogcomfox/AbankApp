@@ -23,6 +23,7 @@
     <string name="text_logout_verify">Are you sure to logout your account?</string>
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
+    <string name="text_permission_not_granted">Permissions not granted by the user</string>
     <!--Text Success String-->
     <string name="text_welcome">Welcome To Abank!</string>
     <string name="text_success_reset">Please check your email inbox</string>
@@ -55,4 +56,5 @@
     <string name="ic_profile_picture">Profile Picture</string>
     <string name="ic_change_email">Change Email</string>
     <string name="ic_change_pass">Change Password</string>
+    <string name="btn_edit_profile">Edit Profile</string>
 </resources>
