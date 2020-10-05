@@ -1,60 +1,73 @@
 package com.nusantarian.abank_gov.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
 import com.nusantarian.abank_gov.R
+import com.nusantarian.abank_gov.databinding.FragmentForgotPassBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class ForgotPassFragment : Fragment(), View.OnClickListener {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ForgotPassFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ForgotPassFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentForgotPassBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forgot_pass, container, false)
+        _binding = FragmentForgotPassBinding.inflate(inflater, container, false)
+        auth = FirebaseAuth.getInstance()
+        binding.btnReset.setOnClickListener(this)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ForgotPassFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ForgotPassFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onClick(v: View) {
+        if (v.id == R.id.btn_reset) {
+            binding.progress.visibility = View.VISIBLE
+            val email = binding.tilEmail.editText?.text.toString()
+            if (!isEmailValid(email)){
+                binding.progress.visibility = View.GONE
+            } else {
+                auth.sendPasswordResetEmail(email).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        Log.i("Forgot Pass", "Success")
+                        Toast.makeText(activity, R.string.text_success_reset, Toast.LENGTH_SHORT).show()
+                    } else {
+                        Log.e("Forgot Pass", "Failed")
+                        Toast.makeText(activity, R.string.text_failed_reset, Toast.LENGTH_SHORT).show()
+                    }
+                    binding.progress.visibility = View.GONE
+                }.addOnFailureListener {
+                    binding.progress.visibility = View.GONE
+                    Log.e("Forgot Pass", it.toString())
+                    Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+    }
+
+    private fun isEmailValid(email: String): Boolean {
+        val empty = activity?.resources?.getString(R.string.text_empty)
+        val invalid = activity?.resources?.getString(R.string.text_invalid_email)
+        return if(email.isEmpty()){
+            binding.tilEmail.error = empty
+            false
+        }
+        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            binding.tilEmail.error = invalid
+            false
+        } else {
+            binding.tilEmail.error = null
+            binding.tilEmail.isErrorEnabled
+            true
+        }
     }
 }

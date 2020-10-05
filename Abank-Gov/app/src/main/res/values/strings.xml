@@ -1,16 +1,27 @@
 <resources>
     <string name="app_name">Abank-Gov</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <string name="tv_for_gov">For Government</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_for_gov">For Government</string>
+    <!--Navigation Menu String-->
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_message">Message</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_log_out">Log Out</string>
+    <!--Text Message-->
+    <string name="text_empty">This field is Empty</string>
+    <string name="text_invalid_email">Invalid Email Address</string>
+    <string name="text_failed_login">Failed Login Your Account</string>
+    <string name="text_success_login">Welcome Admin</string>
+    <string name="text_success_reset">Please Check Your Email Inbox</string>
+    <string name="text_failed_reset">Failed to Reset Password</string>
+    <!--Auth Fragment String-->
     <string name="til_email_address">Email Address</string>
     <string name="tv_forgot">Forgot Password?</string>
     <string name="btn_login">Login</string>
     <string name="til_pass">Password</string>
+    <string name="tv_info_forgot">Insert Your Email Address to Reset Your Password</string>
+    <string name="btn_reset">Reset Password</string>
+    <string name="title_activity_main">Map</string>
 </resources>

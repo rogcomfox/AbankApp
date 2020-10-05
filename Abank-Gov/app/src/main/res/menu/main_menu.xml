@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="@string/nav_notifications"
+        android:icon="@drawable/ic_notifications"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_message"
+        android:title="@string/nav_message"
+        android:icon="@drawable/ic_email"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_profile"
+        android:title="@string/nav_profile"/>
+    <item
+        android:id="@+id/nav_settings"
+        android:title="@string/nav_settings"/>
+    <item
+        android:id="@+id/nav_log_out"
+        android:title="@string/nav_log_out"/>
+</menu>
