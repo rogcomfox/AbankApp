@@ -16,6 +16,9 @@
     <string name="text_success_login">Welcome Admin</string>
     <string name="text_success_reset">Please Check Your Email Inbox</string>
     <string name="text_failed_reset">Failed to Reset Password</string>
+    <string name="text_message_log_out">Are You Sure To Log Out Your Account?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
     <!--Auth Fragment String-->
     <string name="til_email_address">Email Address</string>
     <string name="tv_forgot">Forgot Password?</string>
