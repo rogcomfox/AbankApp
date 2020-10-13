@@ -6,6 +6,7 @@ import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -23,6 +24,7 @@ class MainFragment : Fragment(), OnMapReadyCallback {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
+    private lateinit var ft: FragmentTransaction
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +36,15 @@ class MainFragment : Fragment(), OnMapReadyCallback {
         (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         setHasOptionsMenu(true)
+        ft = activity?.supportFragmentManager?.beginTransaction()!!
         auth = FirebaseAuth.getInstance()
+
+        //fab on click
+        binding.fabAddIot.setOnClickListener{
+            ft.replace(R.id.frame_main, AddFragment())
+                .addToBackStack(null)
+                .commit()
+        }
         return binding.root
     }
 

@@ -19,6 +19,7 @@
     <string name="text_message_log_out">Are You Sure To Log Out Your Account?</string>
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
+    <string name="text_permissions_not_granted">Permissions Not Granted By User</string>
     <!--Auth Fragment String-->
     <string name="til_email_address">Email Address</string>
     <string name="tv_forgot">Forgot Password?</string>
@@ -27,4 +28,15 @@
     <string name="tv_info_forgot">Insert Your Email Address to Reset Your Password</string>
     <string name="btn_reset">Reset Password</string>
     <string name="title_activity_main">Map</string>
+    <!--Main Fragment String-->
+    <string name="fab_add_iot">Add IoT</string>
+    <string name="nav_photo">Profile Picture</string>
+    <string name="nav_email">Change Email</string>
+    <string name="nav_pass">Change Password</string>
+    <string name="btn_edit_profile">Edit Profile</string>
+    <!--Edit Profile Fragment-->
+    <string name="til_id">ID Card Number</string>
+    <string name="til_name">Full Name</string>
+    <string name="til_phone">Phone Number</string>
+    <string name="btn_change_data">Change Data</string>
 </resources>
