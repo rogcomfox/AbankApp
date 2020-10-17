@@ -29,6 +29,8 @@ class MainFragment : Fragment(), View.OnClickListener {
         setHasOptionsMenu(true)
 
         binding.cardAccount.setOnClickListener(this)
+        binding.cardDataIot.setOnClickListener(this)
+        binding.cardMaps.setOnClickListener(this)
         return binding.root
     }
 
@@ -71,6 +73,14 @@ class MainFragment : Fragment(), View.OnClickListener {
         when(v.id){
             R.id.card_account ->
                 ft.replace(R.id.frame_main, MyAccountFragment())
+                    .addToBackStack(null)
+                    .commit()
+            R.id.card_data_iot ->
+                ft.replace(R.id.frame_main, DailyDataFragment())
+                    .addToBackStack(null)
+                    .commit()
+            R.id.card_maps ->
+                ft.replace(R.id.frame_main, IotMapFragment())
                     .addToBackStack(null)
                     .commit()
         }
