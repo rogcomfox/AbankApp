@@ -9,6 +9,10 @@
     <string name="nav_profile">Profile</string>
     <string name="nav_settings">Settings</string>
     <string name="nav_log_out">Log Out</string>
+    <string name="nav_trash">Delete All</string>
+    <string name="nav_photo">Profile Picture</string>
+    <string name="nav_email">Change Email</string>
+    <string name="nav_pass">Change Password</string>
     <!--Text Message-->
     <string name="text_empty">This field is Empty</string>
     <string name="text_invalid_email">Invalid Email Address</string>
@@ -20,6 +24,7 @@
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
     <string name="text_permissions_not_granted">Permissions Not Granted By User</string>
+    <string name="text_notifications">Delete All Notifications?</string>
     <!--Auth Fragment String-->
     <string name="til_email_address">Email Address</string>
     <string name="tv_forgot">Forgot Password?</string>
@@ -30,9 +35,6 @@
     <string name="title_activity_main">Map</string>
     <!--Main Fragment String-->
     <string name="fab_add_iot">Add IoT</string>
-    <string name="nav_photo">Profile Picture</string>
-    <string name="nav_email">Change Email</string>
-    <string name="nav_pass">Change Password</string>
     <string name="btn_edit_profile">Edit Profile</string>
     <!--Edit Profile Fragment-->
     <string name="til_id">ID Card Number</string>

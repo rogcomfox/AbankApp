@@ -65,7 +65,9 @@ class MainFragment : Fragment(), OnMapReadyCallback {
             R.id.nav_log_out ->
                 raiseDialog()
             R.id.nav_notifications ->
-                Toast.makeText(activity, "Under Construction", Toast.LENGTH_SHORT).show()
+                ft.replace(R.id.frame_main, NotificationsFragment())
+                    .addToBackStack(null)
+                    .commit()
             R.id.nav_message ->
                 Toast.makeText(activity, "Under Construction", Toast.LENGTH_SHORT).show()
             R.id.nav_profile ->
